@@ -21,7 +21,7 @@ Here's a quick look at the core aspects and value delivered by this data analysi
 
 This project is delivered as a Jupyter Notebook containing all analysis steps, alongside the raw dataset.
 
-* **['Bank_Marketing_Inspection_test.ipynb'](: The main Jupyter Notebook file containing all Python code for EDA, data preprocessing, model building, evaluation, and conclusion.
+* **['Bank_Marketing_Inspection_test.ipynb'](https://github.com/navyaprashanth/Bank-Marketing-Analysis-Term-Deposit-Prediction/blob/main/bankmarketing.csv)**: The main Jupyter Notebook file containing all Python code for EDA, data preprocessing, model building, evaluation, and conclusion.
 * `bank-marketing.csv`: The raw dataset used for this analysis.
 * `images/`: This directory contains key visualizations and plots generated during the analysis, embedded in this README.
 * **(Optional - if you have videos):** `videos/`: This directory contains any project demonstration videos (e.g., screen recordings of dashboard interactivity, if applicable to this project).
