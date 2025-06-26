@@ -2,8 +2,7 @@
 
 ## Introduction
 
-This project details a comprehensive data analysis initiative focused on a Portuguese bank's marketing campaign dataset. **This analysis was undertaken as a practical test during my one-month internship at Skillfield, given by a mentor, which I successfully completed and received a certificate for.**
-
+This project details a comprehensive data analysis initiative focused on a Portuguese bank's marketing campaign dataset. **This analysis was undertaken as a practical test during my one-month internship at Skillfield, given by a mentor, which I successfully completed and received a **['certificate'](<img width="517" alt="Image" src="https://github.com/user-attachments/assets/4187bc8f-df32-4d47-b0f4-2795781ccc60" />)** for.**
 
 The primary objective was to understand customer behavior and predict the likelihood of clients subscribing to a term deposit. By leveraging various data analysis and machine learning techniques, I aimed to transform raw campaign data into actionable insights, enabling the bank to optimize its future marketing strategies and improve conversion rates.
 
@@ -14,28 +13,33 @@ My goal was to develop a predictive model that accurately identifies potential s
 Here's a quick look at the core aspects and value delivered by this data analysis project:
 
 📊 **In-Depth Customer Behavior Analysis:** Performed extensive Exploratory Data Analysis (EDA) to uncover key demographic, socio-economic, and campaign-related factors influencing customer subscription decisions.
+
 📈 **Predictive Modeling:** Developed and evaluated classification models (Logistic Regression, Random Forest) to predict term deposit subscriptions, with a focus on F1-Score for the positive class due to dataset imbalance.
+
 💡 **Actionable Insights & Recommendations:** Identified top influential features (e.g., call duration, previous campaign outcome, economic indicators) to provide concrete, implementable strategies for optimizing future marketing efforts.
+
 ⚙️ **Impact on Campaign Efficiency:** Enabled the bank to potentially improve targeting accuracy, leading to more efficient resource allocation and a higher return on investment for marketing campaigns.
+
 🐍 **Python for End-to-End Analysis:** Utilized Python for data cleaning, preprocessing, feature engineering, model building, and evaluation.
+
 🧠 **AI-Assisted Development:** Leveraged AI (Gemini) for efficient Python code generation and iterative problem-solving, significantly accelerating the project delivery while maintaining focus on analytical depth and insights.
 
 ## Project Structure & Files
 
-This project is delivered as a single, fully-solved Jupyter Notebook containing all analysis steps, along with the raw dataset. All code, outputs, and visualizations are embedded directly within the notebook file.
+This project is delivered as a single, fully-solved Jupyter Notebook containing all analysis steps, alongside the raw dataset. All code, outputs, and visualizations are embedded directly within the notebook file.
 
-* `Bank_Marketing_Inspection_test.ipynb`: The main Jupyter Notebook file, fully solved, containing all Python code for EDA, data preprocessing, model building, evaluation, and conclusion. All plots and charts generated during the analysis are embedded within this notebook.
-* `bank-marketing.csv`: The raw dataset used for this analysis.
+* **['Bank_Marketing_Inspection_test.ipynb'](https://github.com/navyaprashanth/Bank-Marketing-Analysis-Term-Deposit-Prediction/blob/main/Bank_Marketing_Inspection_test.ipynb)**: The main Jupyter Notebook file, fully solved, containing all Python code for EDA, data preprocessing, model building, evaluation, and conclusion. All plots and charts generated during the analysis are embedded within this notebook.
+* **['bank-marketing.csv'](https://github.com/navyaprashanth/Bank-Marketing-Analysis-Term-Deposit-Prediction/blob/main/bankmarketing.csv)** : The raw dataset used for this analysis.
 
 ## Technologies & Skills Used
 
 This project demonstrates proficiency in end-to-end data analysis, from understanding raw data to generating actionable insights and building predictive models.
 
-* 🐍 **Python:** Utilized for all stages of data analysis, including:
+* 🐍 **Python (in Jupyter Notebook):** Utilized for all stages of data analysis, including:
     * **Pandas & NumPy:** For data manipulation, cleaning, and preprocessing.
     * **Matplotlib & Seaborn:** For data visualization and exploratory data analysis.
     * **Scikit-learn:** For machine learning model development (Logistic Regression, Random Forest), hyperparameter tuning, and model evaluation (classification reports, confusion matrices, ROC AUC).
-    * **(Optional - if used for imbalance):** `imblearn` for handling imbalanced datasets (e.g., SMOTE).
+   
 * 🧠 **AI Assistance (Gemini):** Leveraged for efficient Python code generation, debugging, and accelerating the iterative development process. This approach allowed for rapid prototyping and and enabled a concentrated focus on analytical problem-solving and insightful visualization, rather than manual coding complexities, significantly accelerating project delivery.
 
 ## Dataset Overview
@@ -49,18 +53,28 @@ The analytical insights and predictive models in this project are based on a pub
 
 ## Analysis & Modeling Breakdown
 
-This project follows a structured approach, progressing from initial data understanding to advanced predictive modeling. All visualizations and detailed outputs mentioned below can be found directly within the `Bank_Marketing_Inspection_test.ipynb` notebook.
+This project follows a structured approach, progressing from initial data understanding to advanced predictive modeling. All detailed outputs and full visualizations can be found directly within the **['Bank_Marketing_Inspection_test.ipynb'](https://github.com/navyaprashanth/Bank-Marketing-Analysis-Term-Deposit-Prediction/blob/main/Bank_Marketing_Inspection_test.ipynb)** notebook. Key insights are highlighted below with representative images.
 
 ### 1. Exploratory Data Analysis (EDA)
 * **Objective:** To understand the dataset's structure, identify data quality issues, and uncover initial patterns and relationships between features and the target variable.
 * **Key Insights:**
     * **Target Imbalance:** Confirmed significant class imbalance (`y = 'no'` >> `y = 'yes'`).
-    * **Call Duration (`duration`):** Discovered to be a highly influential feature; longer calls strongly correlated with subscription, though its real-world use for *pre-call* prediction is limited. (Visualized with a box plot comparing duration for subscribers vs. non-subscribers).
-    * **Previous Campaign Outcome (`poutcome`):** Clients with a 'success' in previous campaigns were much more likely to subscribe again. (Visualized with a bar plot).
-    * **Socio-economic Factors:** Features like `euribor3m` (interest rates), `emp.var.rate` (employment variation rate), and `nr.employed` showed clear correlations with subscription rates, highlighting the impact of economic conditions. (Visualized with box plots).
-    * **Contact Month:** Identified specific months (e.g., March, October, September) with higher subscription rates, suggesting seasonality. (Visualized with a bar plot).
+    * **Call Duration (`duration`):** Discovered to be a highly influential feature; longer calls strongly correlated with subscription, though its real-world use for *pre-call* prediction is limited.
+        * **['Box Plot of Call Duration vs. Term Deposit Subscription'](<img width="440" alt="Image" src="https://github.com/user-attachments/assets/dd5e0680-a541-4e02-a7e4-d43e209e8d0c" />)**
+        `![Box plot of Call Duration vs. Term Deposit Subscription](images/duration_boxplot.png)`
+    * **Previous Campaign Outcome (`poutcome`):** Clients with a 'success' in previous campaigns were much more likely to subscribe again.
+        * **[Insert Bar Plot of Previous Campaign Outcome vs. Term Deposit Subscription Here]**
+        `![Bar plot of Previous Campaign Outcome vs. Term Deposit Subscription](images/poutcome_barplot.png)`
+    * **Socio-economic Factors:** Features like `euribor3m` (interest rates), `emp.var.rate` (employment variation rate), and `nr.employed` showed clear correlations with subscription rates, highlighting the impact of economic conditions.
+        * **[Insert Box Plots of Socio-economic Factors vs. Term Deposit Subscription Here (combine if possible)]**
+        `![Box plots of Socio-economic Factors vs. Term Deposit Subscription](images/socioeconomic_boxplots.png)`
+    * **Contact Month:** Identified specific months (e.g., March, October, September) with higher subscription rates, suggesting seasonality.
+        * **[Insert Bar Plot of Contact Month vs. Term Deposit Subscription Here]**
+        `![Bar plot of Contact Month vs. Term Deposit Subscription](images/month_barplot.png)`
     * **Campaign Contacts:** Customers who subscribed typically had fewer contacts in the current campaign.
-    * **Demographics:** Explored relationships between job, marital status, education, and age with subscription behavior. (Visualized with bar plots for key demographic features).
+    * **Demographics:** Explored relationships between job, marital status, education, and age with subscription behavior.
+        * **[Insert Bar Plot of Job Type vs. Term Deposit Subscription Here]**
+        `![Bar plot of Job Type vs. Term Deposit Subscription](images/job_barplot.png)`
 
 ### 2. Data Preprocessing & Feature Engineering
 * **Objective:** To prepare the raw data for machine learning models, including handling categorical variables, scaling numerical features, and addressing dataset imbalance.
@@ -78,13 +92,19 @@ This project follows a structured approach, progressing from initial data unders
     * **F1-Score (for 'yes' class):** Crucial for evaluating performance on the minority class (subscribers).
     * **ROC AUC:** To assess the model's ability to distinguish between positive and negative classes across various thresholds.
     * **Precision, Recall, Accuracy:** Also considered to provide a comprehensive view of model performance.
-* **Findings:** The **Random Forest Classifier** generally outperformed Logistic Regression, demonstrating better capability in handling the dataset's complexities and imbalance, achieving higher F1-Scores and ROC AUC for predicting subscriptions. (Detailed metrics, confusion matrices, and ROC curves are available in the notebook).
+* **Findings:** The **Random Forest Classifier** generally outperformed Logistic Regression, demonstrating better capability in handling the dataset's complexities and imbalance, achieving higher F1-Scores and ROC AUC for predicting subscriptions.
+    * **[Insert Confusion Matrix Image Here]**
+    `![Confusion Matrix for Random Forest Model](images/confusion_matrix_rf.png)`
+    * **[Insert ROC Curve Image Here]**
+    `![ROC Curve for Random Forest Model](images/roc_curve_rf.png)`
 
 ### 4. Feature Importance Analysis
 * **Objective:** To identify which features were most influential in the Random Forest model's predictions, providing insights into drivers of subscription.
 * **Key Findings:**
     * `duration` (call duration) was overwhelmingly the most important feature. (Acknowledged its post-call nature for real-world application limitations).
-    * `euribor3m` (a key economic indicator), `poutcome_success` (previous campaign success), `age`, and `campaign` (number of contacts in current campaign) were also highly significant. (Feature importance plot available in the notebook).
+    * `euribor3m` (a key economic indicator), `poutcome_success` (previous campaign success), `age`, and `campaign` (number of contacts in current campaign) were also highly significant.
+    * **[Insert Feature Importance Plot Here]**
+    `![Feature Importance from Random Forest Model](images/feature_importance.png)`
 
 ## Actionable Business Impact & Value Proposition
 
